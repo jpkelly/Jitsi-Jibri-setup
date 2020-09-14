@@ -5,7 +5,7 @@ Setting up Jitsi-Meet with Jibri on Ubuntu Server 18.04
 https://github.com/jpkelly/Jitsi-setup/
 
 ## On Jitsi-Meet server configure Prosody
-### 1 Edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
+### Edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
 Add MUC component
 ```
 -- internal muc component, meant to enable pools of jibri and jigasi clients
@@ -26,7 +26,7 @@ VirtualHost "recorder.<FQDN>"
   }
   authentication = "internal_plain"
 ```
-### 2 Add Jibri users
+### Add Jibri users
 ```
 prosodyctl register jibri auth.<FQDN> jibriauthpass
 prosodyctl register recorder recorder.<FQDN> jibrirecorderpass
