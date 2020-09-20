@@ -52,3 +52,5 @@ org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90
 
 ## Dropbox Integration
 https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-web-integrations
+
+## AWS S3 Integration
