@@ -26,6 +26,15 @@ VirtualHost "recorder.<FQDN>"
   }
   authentication = "internal_plain"
 ```
+
+## Jitsi Meet
+Edit `/etc/jitsi/meet/yourdomain-config.js`
+```
+fileRecordingsEnabled: true, // If you want to enable file recording
+liveStreamingEnabled: true, // If you want to enable live streaming
+hiddenDomain: 'recorder.<FQDN>',
+```
+
 ### Add Jibri users
 ```
 prosodyctl register jibri auth.<FQDN> jibriauthpass
@@ -39,10 +48,3 @@ org.jitsi.jicofo.jibri.BREWERY=JibriBrewery@internal.auth.<FQDN>
 org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90
 ```
 
-## Jitsi Meet
-Edit `/etc/jitsi/meet/yourdomain-config.js`
-```
-fileRecordingsEnabled: true, // If you want to enable file recording
-liveStreamingEnabled: true, // If you want to enable live streaming
-hiddenDomain: 'recorder.<FQDN>',
-```
