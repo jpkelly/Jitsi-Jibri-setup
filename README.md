@@ -8,7 +8,7 @@ https://github.com/jpkelly/Jitsi-setup/
 ### Configure Prosody 
 Edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
 
-Add MUC component
+Add MUC component (already exists?)
 ```
 -- internal muc component, meant to enable pools of jibri and jigasi clients
 Component "internal.auth.dev.vevomo.com" "muc"
@@ -20,7 +20,7 @@ Component "internal.auth.dev.vevomo.com" "muc"
     muc_room_locking = false
     muc_room_default_public_jids = true
 ```
-Add recorder virtual host
+Add recorder virtual host (after guest VirtualHost)
 ```
 VirtualHost "recorder.<FQDN>"
   modules_enabled = {
