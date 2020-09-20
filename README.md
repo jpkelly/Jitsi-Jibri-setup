@@ -33,7 +33,7 @@ prosodyctl register jibri auth.<FQDN> jibriauthpass
 prosodyctl register recorder recorder.<FQDN> jibrirecorderpass
 ```
 
-## Jitsi Meet
+### Jitsi-Meet config
 Edit `/etc/jitsi/meet/yourdomain-config.js`
 ```
 fileRecordingsEnabled: true, // If you want to enable file recording
