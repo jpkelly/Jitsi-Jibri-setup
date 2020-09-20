@@ -4,8 +4,8 @@ Setting up Jitsi-Meet with Jibri on Ubuntu Server 18.04
 ## Set up Jitsi-Meet as described here.
 https://github.com/jpkelly/Jitsi-setup/
 
-## On Jitsi-Meet server configure Prosody
-### Edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
+## On Jitsi-Meet server 
+### Configure Prosody edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
 Add MUC component
 ```
 -- internal muc component, meant to enable pools of jibri and jigasi clients
