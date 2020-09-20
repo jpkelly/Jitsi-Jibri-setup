@@ -27,18 +27,18 @@ VirtualHost "recorder.<FQDN>"
   authentication = "internal_plain"
 ```
 
+### Add Jibri users
+```
+prosodyctl register jibri auth.<FQDN> jibriauthpass
+prosodyctl register recorder recorder.<FQDN> jibrirecorderpass
+```
+
 ## Jitsi Meet
 Edit `/etc/jitsi/meet/yourdomain-config.js`
 ```
 fileRecordingsEnabled: true, // If you want to enable file recording
 liveStreamingEnabled: true, // If you want to enable live streaming
 hiddenDomain: 'recorder.<FQDN>',
-```
-
-### Add Jibri users
-```
-prosodyctl register jibri auth.<FQDN> jibriauthpass
-prosodyctl register recorder recorder.<FQDN> jibrirecorderpass
 ```
 
 ## Jicofo
