@@ -6,7 +6,7 @@ https://github.com/jpkelly/Jitsi-setup/
 
 ## On Jitsi-Meet server 
 ### Configure Prosody 
-#### edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
+Edit `/etc/prosody/conf.avail/<FQDN>.cfg.lua`
 Add MUC component
 ```
 -- internal muc component, meant to enable pools of jibri and jigasi clients
