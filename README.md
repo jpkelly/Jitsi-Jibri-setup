@@ -1,7 +1,7 @@
 # Jitsi with Jibri setup on AWS EC2 Ubuntu Server 18.04 
 Setting up Jitsi-Meet with Jibri on Ubuntu Server 18.04
 
-## Set up Jitsi as described here.
+## Set up Jitsi-Meet as described here.
 https://github.com/jpkelly/Jitsi-setup/
 
 ## On Jitsi-Meet server configure Prosody
