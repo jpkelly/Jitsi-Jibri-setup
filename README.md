@@ -31,12 +31,12 @@ VirtualHost "recorder.<FQDN>"
 
 ### Add Jibri users
 ```
-prosodyctl register jibri auth.<FQDN> jibriauthpass
-prosodyctl register recorder recorder.<FQDN> jibrirecorderpass
+prosodyctl register jibri auth.<FQDN> <jibriauthpass>
+prosodyctl register recorder recorder.<FQDN> <jibrirecorderpass>
 ```
 
 ### Jitsi-Meet config
-Edit `/etc/jitsi/meet/yourdomain-config.js`
+Edit `/etc/jitsi/meet/<FQDN>-config.js`
 ```
 fileRecordingsEnabled: true, // If you want to enable file recording
 liveStreamingEnabled: true, // If you want to enable live streaming
