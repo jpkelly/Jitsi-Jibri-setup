@@ -43,7 +43,7 @@ liveStreamingEnabled: true, // If you want to enable live streaming
 hiddenDomain: 'recorder.<FQDN>',
 ```
 
-## Jicofo
+### Jicofo
 Edit `/etc/jitsi/jicofo/sip-communicator.properties` (must have the following)
 ```
 org.jitsi.jicofo.BRIDGE_MUC=JvbBrewery@internal.auth.<FQDN>
@@ -52,10 +52,36 @@ org.jitsi.jicofo.jibri.BREWERY=JibriBrewery@internal.auth.<FQDN>
 org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90
 ```
 
-## Dropbox Integration
+### Dropbox Integration
 https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-web-integrations
 
-## AWS S3 Integration
+### AWS S3 Integration
+
+---
+
+## Jibri Server
+snd-aloop module needs to be enabled
+On AWS you need to update your kernel. You can refer to these steps and then continue with the Jibri Installation guide to finalize your installation:
+
+### Update package list
+apt update
+// Install sound module , which is in package linux-image-extra-virtual
+apt -y install linux-image-extra-virtual
+// In between it prompts to update maintainer version, select first option)
+
+Edit default grub file (to make aws kernel generic):
+vim /etc/default/grub and set
+GRUB_DEFAULT=“1>2”
+Run update-grub
+And then reboot now to take this in effect
+// reboot machine (as package version was different than linux kernel version)
+
+modprobe snd-aloop
+// Check aloop correctly exists
+lsmod | grep aloop
+
+// make it automatically start
+echo “snd-aloop” >> /etc/modules
 
 
 ## These files need to be in /usr/local/bin?
