@@ -81,12 +81,14 @@ use
 https://meetrix.io/blog/aws/changing-default-ubuntu-kernel.html
 
 purge aws kernel so update does not break grub boot order
-`apt-get purge 'linux-image-*aws*'`
+```apt-get purge 'linux-image-*aws*'```
 
 set grub line back to default in `/etc/default/grub`
-`GRUB_DEFAULT=0`
-`update-grub`
-`reboot`
+```
+GRUB_DEFAULT=0
+update-grub
+reboot
+```
 
 
 
