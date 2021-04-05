@@ -76,6 +76,21 @@ Run `update-grub`
 And then reboot now to take this in effect
 // reboot machine (as package version was different than linux kernel version)
 
+above did not work
+use
+https://meetrix.io/blog/aws/changing-default-ubuntu-kernel.html
+
+purge aws kernel so update does not break grub boot order
+`apt-get purge 'linux-image-*aws*'`
+
+set grub line back to default in `/etc/default/grub`
+`GRUB_DEFAULT=0`
+`update-grub`
+`reboot`
+
+
+
+
 modprobe snd-aloop
 // Check aloop correctly exists
 `lsmod | grep aloop`
