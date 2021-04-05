@@ -56,3 +56,8 @@ org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90
 https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-web-integrations
 
 ## AWS S3 Integration
+
+
+## These files need to be in /usr/local/bin?
+
+https://github.com/jpkelly/emrah-buster-templates/tree/master/machines/eb-jibri-template/usr/local/bin
